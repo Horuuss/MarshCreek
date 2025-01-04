@@ -1,0 +1,10 @@
+<% layout('./layouts/boilerplate'); %>
+    <h1>Beef Note</h1>
+    <h1><%= beefNot.first %> <%= beefNot.last %></h1>
+    <h2> email: <%= beefNot.email %></h2>
+    <h2> ZIP Code: <%= beefNot.zip %></h2>
+    <p><%= beefNot.note %></p>
+    <form action="/beefinq/<%=beefNot._id%>?_method=DELETE" method="POST">
+        <button>DELETE</button>
+    </form>
+    <a href="/beefinq/notes">Return to note list</a>

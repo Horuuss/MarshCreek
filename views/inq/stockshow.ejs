@@ -1,0 +1,11 @@
+<% layout('./layouts/boilerplate'); %>
+
+    <h1>Stock Note</h1>
+    <h1><%= stockNot.first %> <%= stockNot.last %></h1>
+    <h2> email: <%= stockNot.email %></h2>
+    <h2> ZIP Code: <%= stockNot.zip %></h2>
+    <p><%= stockNot.note %></p>
+    <form action="/stockinq/<%=stockNot._id%>?_method=DELETE" method="POST">
+        <button>DELETE</button>
+    </form>
+    <a href="/stockinq/notes">Return to note list</a>

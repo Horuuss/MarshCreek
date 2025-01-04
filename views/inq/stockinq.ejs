@@ -1,0 +1,45 @@
+
+<% layout('./layouts/boilerplate'); %>
+<div class="row align-items-center" style="height: 620px">
+    <div class="col-2 d-none d-lg-block text-center h-100" style= "background-color: #87ceff">
+      
+      <%- include('../partials/newspanel') %>
+
+    </div>
+    
+    <div class="col-12 col-md-10 col-lg-8 text-center h-100" style= "background-color: #95c21b">  
+        <h3 class="text-center">Stock Inquiry</h3>
+        <div class="col-6 offset-3">
+        <form action="/Stockinq" method="POST">
+        <div class="mt-3">
+            <label class="form-label" for="first">First Name</label>
+            <input class="form-control" type="text" id="first" name="stockinq[first]">
+        </div>
+        <div class="mt-3">
+            <label class="form-label" for="last">Last Name</label>
+            <input class="form-control" type="text" id="last" name="stockinq[last]">
+        </div>
+        <div class="mt-3">
+            <label class="form-label" for="email">email</label>
+            <input class="form-control" type="email" id="email" name="stockinq[email]">
+        </div>
+        <div class="mt-3">
+            <label class="form-label" for="zip">5 Digit ZIP Code</label>
+            <input class="form-control" type="number" id="zip" name="stockinq[zip]">
+        </div>
+        <div class="mt-3">
+            <label class="form-label" for="note">Note</label>
+            <textarea class="form-control" type="text" id="note" name="stockinq[note]">
+            </textarea>
+        </div>
+        <button class="btn btn-success mt-2">Submit</button>
+        </form>
+        <h3 class="mt-2"><%=messages%></h3>
+        </div>
+    </div>    
+
+    
+    <div class="col-2 d-none d-md-block text-center bg-warning h-100">
+            <%- include('../partials/calendar') %>
+    </div>
+</div> 

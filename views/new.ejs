@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeefInquiry</title>
+</head>
+<body>
+    <form action="/beefinquiry" method="POST">
+        <div>
+            <label for="first">First Name</label>
+            <input type="text" id="first" name="beefinquiry[first]">
+        </div>
+        <div>
+            <label for="last">Last Name</label>
+            <input type="text" id="last" name="beefinquiry[last]">
+        </div>
+        <div>
+            <label for="email">email</label>
+            <input type="text" id="email" name="beefinquiry[email]">
+        </div>
+        <div>
+            <label for="zip">5 Digit ZIP Code</label>
+            <input type="number" id="zip" name="beefinquiry[zip]">
+        </div>
+        <div>
+            <label for="note">Note</label>
+            <input type="text" id="note" name="beefinquiry[note]">
+        </div>
+        <button>Send</button>
+    </form>
+</body>
+</html>
