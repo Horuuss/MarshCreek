@@ -14,10 +14,9 @@ const Stock = require('./models/stock');  // bring in schema
 const sessionOptions = { secret: 'thisisnotagoodsecret', resave: false, saveUninitialized: false }
 app.use(session(sessionOptions));
 app.use(flash());
-//const dbUrl = "mongodb+srv://mdinsmore:7FPHAe2IWNm155WW@cluster0.y3p3x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 //console.log(dbUrl);
-//mongoose.connect(dbUrl, { 
-mongoose.connect('mongodb://127.0.0.1:27017/marshcreek', {  
+mongoose.connect(dbUrl, { 
+//mongoose.connect('mongodb://127.0.0.1:27017/marshcreek', {  
  //   useNewUrlParser: true,
  //   UseUnifiedTopology: true
 });  /// connect to mongo db marshcreek
