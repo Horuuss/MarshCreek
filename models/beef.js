@@ -8,6 +8,6 @@ const BeefSchema = new Schema({
     zip: Number,
     note: String
 })
-/// next line initiates
+/// next line initiatess
 
 module.exports = mongoose.model('Beef', BeefSchema); 
