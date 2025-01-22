@@ -1,19 +1,25 @@
-const express = require("express"),
-    app = express()
+const express = require("express");
+const ejsMate = require("ejs-mate");
+const path = require("path")
 
-    app.set("view engine", "ejs");
+app = express()
 
+app.engine("ejs", ejsMate)
 
-    app.get("/", function (req, res){
-        res.render("index");
-    });
+app.set("view engine", "ejs");
 
-    app.get("/magic", function (req, res) {
-        res.render("magic");
-    });
+app.set("views", path.join(__dirname, "views"));
 
-    app.listen(8080, function () {
-        console.log("server is running on port 8080 ");
-    });
+app.get("/", function (req, res){
+    res.render("home");
+});
 
-    app.use( express.static( "public"));
+app.get("/magic", function (req, res) {
+    res.render("magic");
+});
+
+app.listen(8080, function () {
+    console.log("server is running on port 8080 ");
+});
+
+app.use( express.static( "public"));
