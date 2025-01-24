@@ -46,10 +46,6 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.get('/magic', (req, res) => {
-    res.render('magic');
-});
-
 app.get('/Belties', (req, res) => {
     res.render('belties');
 });
